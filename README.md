@@ -7,7 +7,7 @@ Islamabad and Rawalpindi. Users browse hikes, search/filter/sort, open details, 
 complete a validated booking form, review a calculated summary and reach a confirmation.
 **All bookings are simulated.** No payment, credentials or personal data are collected.
 
-- GitHub: https://github.com/mkhzymahu/margalla-trail-co/ · Deployment: https://margalla-trail-co.vercel.app/ · Final commit: 05730fa0864b5ef2f7f1c6e9caed8a182b5f7bce
+- GitHub: https://github.com/mkhzymahu/margalla-trail-co/ · Deployment: https://margalla-trail-co.vercel.app/ · Final commit: 3b5a29ccb1c720bd42fda89d063715c78132a398
 
 ## Commands
     npm install
