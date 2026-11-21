@@ -2,7 +2,7 @@
 .details-intro { grid-area: intro; }
 .booking-panel { grid-area: panel; position: sticky; top: 1rem; }
 .details-more { grid-area: more; }
-.details-intro .trail-art { height: 160px; border-radius: var(--radius); }
+.details-intro .session-photo { height: 240px; border-radius: var(--radius); }
 .facts.big { font-size: 1.05rem; }
 .price-hero { font-size: 1.3rem; }
 .long-text { overflow-wrap: anywhere; }

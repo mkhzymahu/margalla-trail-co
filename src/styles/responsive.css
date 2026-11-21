@@ -30,5 +30,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+  .leaf-confetti { display: none; }
   .spinner { animation: none; }
 }
