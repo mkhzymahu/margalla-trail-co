@@ -1,0 +1,22 @@
+/* 390px-first adjustments. DOM order already puts price, rules and the booking panel
+   before the long description, so mobile users see conditions first (Problem 1). */
+@media (max-width: 900px) {
+  .details-grid { grid-template-columns: 1fr; grid-template-areas: "intro" "panel" "more"; }
+  .booking-panel { position: static; }
+  .plan-layout, .checkout-layout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  h1 { font-size: 1.6rem; }
+  .hero { padding: 1.25rem 1rem; }
+  .filter-grid { grid-template-columns: 1fr; }
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  .actions .btn { flex: 1 1 100%; }
+  .plan-item { flex-direction: column; }
+  .plan-actions { width: 100%; justify-content: space-between; }
+  .card-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation: none; }
+}

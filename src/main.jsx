@@ -5,6 +5,7 @@ import App from './App.jsx';
 import { BookingProvider } from './context/BookingContext.jsx';
 import './styles/base.css';
 import './styles/journey.css';
+import './styles/responsive.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
