@@ -1,0 +1,31 @@
+.details-grid { display: grid; grid-template-columns: 1fr 22rem; grid-template-areas: "intro panel" "more panel"; gap: 1.5rem; align-items: start; }
+.details-intro { grid-area: intro; }
+.booking-panel { grid-area: panel; position: sticky; top: 1rem; }
+.details-more { grid-area: more; }
+.details-intro .trail-art { height: 160px; border-radius: var(--radius); }
+.facts.big { font-size: 1.05rem; }
+.price-hero { font-size: 1.3rem; }
+.long-text { overflow-wrap: anywhere; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem; }
+.btn-block { display: block; width: 100%; }
+.ok-text { color: var(--ok); font-weight: 600; margin: 0.35rem 0 0; }
+.plain-list { list-style: none; padding: 0; margin: 0.5rem 0 0; }
+.plain-list li { margin-bottom: 0.4rem; }
+
+.stepper { margin-bottom: 0.25rem; }
+.stepper-label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+.stepper-controls { display: flex; align-items: center; gap: 0.5rem; }
+.stepper-input { width: 5rem; text-align: center; }
+.stepper-value { min-width: 2.5rem; text-align: center; font-weight: 700; font-size: 1.15rem; }
+
+.price-breakdown { margin: 0.75rem 0; }
+.pb-row { display: flex; justify-content: space-between; gap: 1rem; padding: 0.3rem 0; border-bottom: 1px solid var(--line); }
+.pb-row dt, .pb-row dd { margin: 0; }
+.pb-row.ok dd { color: var(--ok); font-weight: 600; }
+.pb-total { font-weight: 700; font-size: 1.15rem; border-bottom: 0; border-top: 2px solid var(--forest); margin-top: 0.25rem; }
+
+.plan-layout, .checkout-layout { display: grid; grid-template-columns: 1fr 22rem; gap: 1.5rem; align-items: start; }
+.plan-list { list-style: none; padding: 0; margin: 0; }
+.plan-item { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1rem; margin-bottom: 0.75rem; }
+.plan-item-missing { background: var(--err-bg); border-color: var(--err); }
+.plan-actions { display: flex; align-items: flex-end; gap: 0.75rem; flex-wrap: wrap; }

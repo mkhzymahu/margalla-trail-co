@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import { BookingProvider } from './context/BookingContext.jsx';
 import './styles/base.css';
+import './styles/journey.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
