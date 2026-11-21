@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import { GROUP_DISCOUNT_MIN_SIZE, GROUP_DISCOUNT_RATE } from '../data/config.js';
 import { availability, formatDate, formatDistance, formatDuration, formatPKR, formatTime } from '../utils/format.js';
-import TrailArt from './TrailArt.jsx';
+import SessionPhoto from './SessionPhoto.jsx';
 
 export default function SessionCard({ session, plannedSize, backTo }) {
   const avail = availability(session);
   const soldOut = session.seatsLeft <= 0;
   return (
     <article className={`card${soldOut ? ' card-unavailable' : ''}`}>
-      <TrailArt category={session.category} />
+      <SessionPhoto session={session} />
       <div className="card-body">
         <p className="meta">
           <span className={`badge ${avail.tone}`}>{avail.text}</span>
