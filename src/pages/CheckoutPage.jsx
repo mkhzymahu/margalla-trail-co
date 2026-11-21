@@ -74,7 +74,7 @@ export default function CheckoutPage() {
     };
     setLastBooking(booking);
     clearPlan();
-    navigate('/confirmation');
+    navigate('/confirmation', { state: { celebrateBooking: true } });
   };
 
   const rows = [

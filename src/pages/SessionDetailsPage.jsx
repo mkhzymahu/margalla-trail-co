@@ -3,8 +3,8 @@ import { Link, useLocation, useParams } from 'react-router-dom';
 import EmptyState from '../components/EmptyState.jsx';
 import PriceBreakdown from '../components/PriceBreakdown.jsx';
 import QuantityStepper from '../components/QuantityStepper.jsx';
+import SessionPhoto from '../components/SessionPhoto.jsx';
 import { ErrorPanel, LoadingPanel } from '../components/StatusPanels.jsx';
-import TrailArt from '../components/TrailArt.jsx';
 import { useBooking } from '../context/BookingContext.jsx';
 import {
   GROUP_DISCOUNT_MIN_SIZE, GROUP_DISCOUNT_RATE, GROUP_MAX, GROUP_MIN, LEVELS, MEETING_POINTS,
@@ -70,7 +70,7 @@ function SessionDetails({ id }) {
       <p><Link to={backTo}>← Back to hikes</Link></p>
       <div className="details-grid">
         <section className="details-intro" aria-labelledby="hike-title">
-          <TrailArt category={session.category} />
+          <SessionPhoto session={session} loading="eager" />
           <h1 id="hike-title" className="long-text">{session.title}</h1>
           <p className="meta">{session.trail} · {session.area}</p>
           <ul className="facts big">
