@@ -4,11 +4,22 @@
   .details-grid { grid-template-columns: 1fr; grid-template-areas: "intro" "panel" "more"; }
   .booking-panel { position: static; }
   .plan-layout, .checkout-layout { grid-template-columns: 1fr; }
+  .hero { grid-template-columns: 1fr 0.8fr; }
+  .hero-copy { padding: 1.75rem; }
 }
 
 @media (max-width: 640px) {
-  h1 { font-size: 1.6rem; }
-  .hero { padding: 1.25rem 1rem; }
+  h1 { font-size: 1.8rem; }
+  main.container { padding-block: 1.25rem 2.5rem; }
+  .hero { grid-template-columns: 1fr; margin-bottom: 2rem; }
+  .hero-copy { padding: 1.5rem; }
+  .hero h1 { font-size: 2.5rem; }
+  .hero-image { min-height: 14rem; }
+  .hero-image img { min-height: 14rem; max-height: 18rem; }
+  .home-details-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .steps { grid-template-columns: 1fr; gap: 0.75rem; }
+  .steps li { min-height: 1.75rem; padding: 0.1rem 0 0 2.2rem; }
+  .steps li::before { top: 0.05rem; }
   .filter-grid { grid-template-columns: 1fr; }
   .header-inner { flex-direction: column; align-items: flex-start; }
   .actions .btn { flex: 1 1 100%; }
@@ -18,5 +29,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
   .spinner { animation: none; }
 }

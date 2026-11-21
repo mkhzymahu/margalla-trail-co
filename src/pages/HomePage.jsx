@@ -9,39 +9,52 @@ export default function HomePage() {
   return (
     <>
       <section className="hero" aria-labelledby="hero-title">
-        <h1 id="hero-title">Guided hikes in the Margalla Hills, built around your timetable</h1>
-        <p>
-          Small-group sunrise, sunset and weekend hikes for university students and young professionals in
-          Islamabad and Rawalpindi. Pick a hike, set your group size and reserve seats in a few steps.
-        </p>
-        <div className="actions">
-          <Link className="btn btn-primary" to="/sessions">Browse hikes</Link>
-          <Link className="btn btn-secondary" to="/plan">View my plan</Link>
+        <div className="hero-copy">
+          <p className="eyebrow">Islamabad · Margalla Hills</p>
+          <h1 id="hero-title">A little further from the everyday.</h1>
+          <p>
+            Small-group sunrise, sunset and weekend hikes for university students and young professionals in
+            Islamabad and Rawalpindi. Find a trail that fits your day.
+          </p>
+          <div className="actions">
+            <Link className="btn btn-primary" to="/sessions">Browse hikes</Link>
+            <Link className="btn btn-secondary" to="/plan">View my plan</Link>
+          </div>
         </div>
+        <figure className="hero-image">
+          <img
+            src="/hiking-trail.jpg"
+            alt="Two hikers walking along a mountain trail"
+          />
+          <figcaption>Find your own pace outdoors.</figcaption>
+        </figure>
       </section>
 
-      <section aria-labelledby="how-title">
-        <h2 id="how-title">How booking works</h2>
-        <ol className="steps">
-          <li>Search and filter the hikes.</li>
-          <li>Open a hike to see the full price, conditions and seats left.</li>
-          <li>Add it to your plan and adjust group sizes.</li>
-          <li>Enter booking details and review the calculated total.</li>
-          <li>Confirm. The booking is simulated.</li>
-        </ol>
-      </section>
+      <div className="home-details-grid">
+        <section className="home-info" aria-labelledby="how-title">
+          <p className="eyebrow">The simple bit</p>
+          <h2 id="how-title">A few steps to the trail</h2>
+          <ol className="steps">
+            <li>Find a hike by date, level or availability.</li>
+            <li>Check the details, seats and full price.</li>
+            <li>Build your plan, then review before confirming.</li>
+          </ol>
+          <p className="home-note">Bookings are simulated for this student project. No payment is taken.</p>
+        </section>
 
-      <section aria-labelledby="rules-title">
-        <h2 id="rules-title">Know before you book</h2>
-        <ul>
-          <li>A booking takes {GROUP_MIN} to {GROUP_MAX} hikers, and never more than the seats left.</li>
-          <li>Each hike has a required experience level. You can only book hikes at or below your level.</li>
-          <li>
-            Groups of {GROUP_DISCOUNT_MIN_SIZE} or more on one hike get {GROUP_DISCOUNT_RATE * 100}% off.
-            The {shuttle.label.split(',')[0]} shuttle adds {formatPKR(shuttle.fee)} once per booking.
-          </li>
-        </ul>
-      </section>
+        <section className="home-info home-info-featured" aria-labelledby="rules-title">
+          <p className="eyebrow">Before you set out</p>
+          <h2 id="rules-title">Know before you book</h2>
+          <ul className="home-rules">
+            <li>{GROUP_MIN}–{GROUP_MAX} hikers per hike, subject to seats left.</li>
+            <li>Choose a hike at or below your experience level.</li>
+            <li>
+              Groups of {GROUP_DISCOUNT_MIN_SIZE}+ get {GROUP_DISCOUNT_RATE * 100}% off.
+              The {shuttle.label.split(',')[0]} shuttle is {formatPKR(shuttle.fee)} per booking.
+            </li>
+          </ul>
+        </section>
+      </div>
     </>
   );
 }
