@@ -44,7 +44,6 @@ Open "Demo controls" in the footer.
 ## Simulated operations and limitations
 - Booking reference and confirmation are generated locally; seats are not reduced after a booking.
 - The booking form is not saved if you leave the page (to avoid storing personal data).
-- [Add anything else that is incomplete.]
 
 ## Concept map
 | Concept | File | Component / function |
